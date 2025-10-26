@@ -9,12 +9,14 @@ const TAB_DATA = [
     id: "skills",
     content: (
       <ul className="list-disc pl-2">
-        <li>Node.js</li>
-        <li>Express</li>
-        <li>PostgreSQL</li>
-        <li>Sequelize</li>
-        <li>JavaScript</li>
-        <li>React</li>
+        <li>React.js</li>
+        <li>Node.js & Express.js</li>
+        <li>Java (Servlets, JSP)</li>
+        <li>Flutter</li>
+        <li>MySQL / PostgreSQL / MongoDB</li>
+        <li>RESTful APIs</li>
+        <li>Git & GitHub Workflow</li>
+        <li>Tailwind CSS</li>
       </ul>
     ),
   },
@@ -23,8 +25,16 @@ const TAB_DATA = [
     id: "education",
     content: (
       <ul className="list-disc pl-2">
-        <li>Fullstack Academy of Code</li>
-        <li>University of California, Santa Cruz</li>
+        <li>
+          <strong>University of Colombo School of Computing</strong><br />
+          B.Sc. in Computer Science (2023 – Present) <br />
+          Current GPA: 3.109
+        </li>
+        <li>
+          <strong>St. Mary’s Convent, Matara</strong><br />
+          G.C.E A/L (2021): <br />
+          Physics - B, Chemistry - A, Combined Mathematics - A
+        </li>
       </ul>
     ),
   },
@@ -33,12 +43,16 @@ const TAB_DATA = [
     id: "certifications",
     content: (
       <ul className="list-disc pl-2">
-        <li>AWS Cloud Practitioner</li>
-        <li>Google Professional Cloud Developer</li>
+        <li>Programming Foundations: Object-Oriented Design</li>
+        <li>AWS Educate: Introduction to Cloud 101</li>
+        <li>React Essential Training</li>
+        <li>Python Quick Start</li>
+        <li>Git Essential Training (2023)</li>
       </ul>
     ),
   },
 ];
+
 
 const AboutSection = () => {
   const [tab, setTab] = useState("skills");

@@ -4,8 +4,17 @@ import Image from 'next/image'
 import { TypeAnimation } from 'react-type-animation';
 
 const HeroSection = () => {
+  const scrollToContact = () => {
+    const el = document.getElementById('contact');
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    } else {
+      // fallback: navigate to anchor
+      window.location.hash = '#contact';
+    }
+  };
   return (
-    <section>
+  <section className="pl-6 sm:pl-20">
       <div className='grid grid-cols-1 sm:grid-cols-12'>
         
         {/* Left Text Section */}
@@ -37,15 +46,20 @@ const HeroSection = () => {
           </p>
 
           <div className='mt-4'>
-            <button className='px-6 py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 hover:opacity-80 text-white'>
+            <button onClick={scrollToContact} type="button" className='px-6 py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 hover:opacity-80 text-white'>
               Hire Me
             </button>
 
-            <button className='px-1 py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-blue-500 via-pink-500 to-purple-500 hover:opacity-80 text-white mt-3 sm:mt-0'>
+            <a
+              href="/Himasha.pdf"
+              download
+              aria-label="Download resume"
+              className='px-1 py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-blue-500 via-pink-500 to-purple-500 hover:opacity-80 text-white mt-3 sm:mt-0 inline-block'
+            >
               <span className='block bg-[#121212] hover:bg-slate-800 rounded-full px-6 py-3'>
                 Download CV
               </span>
-            </button>
+            </a>
           </div>
 
         </div>
