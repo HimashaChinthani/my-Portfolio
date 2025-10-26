@@ -33,9 +33,7 @@ const HeroSection = () => {
           </h1>
 
           <p className='text-[#ADB7BE] text-base sm:text-lg lg:text-xl mb-6'>
-            I am dedicated to advancing as a software engineer and am a third-year Computer Science undergraduate 
-            at the University of Colombo School of Computing with hands-on experience in full-stack development. 
-            I have worked with Java, React, Node.js, Flutter, and databases including MySQL, PostgreSQL, and MongoDB.
+            Computer Science Undergraduate
           </p>
 
           <div className='mt-4'>
