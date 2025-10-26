@@ -44,8 +44,17 @@ export async function POST(req) {
         </>
       ),
     });
+    // Log resend response (useful for debugging delivery problems)
+    console.log('[api/send] resend response:', data);
 
-    return NextResponse.json({ success: true, data });
+    // If the Resend response contains an error object, treat it as a failure
+    if (data && data.error) {
+      console.error('[api/send] resend reported error:', data.error);
+      const statusCode = (data.error && data.error.statusCode) || 500;
+      return NextResponse.json({ success: false, error: data.error }, { status: statusCode });
+    }
+
+    return NextResponse.json({ success: true, data }, { status: 200 });
   } catch (error) {
     // Log full error for debugging in dev
     console.error('[api/send] send error:', error);

@@ -5,6 +5,7 @@ import Image from "next/image";
 
 const EmailSection = () => {
   const [emailSubmitted, setEmailSubmitted] = useState(false);
+  const [emailError, setEmailError] = useState(null);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -28,12 +29,24 @@ const EmailSection = () => {
       body: JSONdata,
     };
 
-    const response = await fetch(endpoint, options);
-    const resData = await response.json();
+    try {
+      const response = await fetch(endpoint, options);
+      const resData = await response.json();
 
-    if (response.status === 200) {
-      console.log("Message sent.");
-      setEmailSubmitted(true);
+      console.log('[client] /api/send response', response.status, resData);
+
+      if (response.status === 200 && resData && resData.success) {
+        setEmailSubmitted(true);
+        setEmailError(null);
+      } else {
+        // surface error to user
+        const errMsg = (resData && (resData.error || JSON.stringify(resData))) || 'Unknown error';
+        setEmailError(errMsg);
+        console.error('[client] failed to send email:', errMsg);
+      }
+    } catch (err) {
+      setEmailError(String(err));
+      console.error('[client] request failed', err);
     }
   };
 
@@ -42,7 +55,7 @@ const EmailSection = () => {
       id="contact"
       className="grid md:grid-cols-2 my-12 md:my-12 py-24 gap-4 relative"
     >
-      <div className="bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary-900 to-transparent rounded-full h-80 w-80 z-0 blur-lg absolute top-3/4 -left-4 transform -translate-x-1/2 -translate-1/2"></div>
+  <div className="bg-[radial-gradient(ellipse_at_center,var(--tw-gradient-stops))] from-primary-900 to-transparent rounded-full h-80 w-80 z-0 blur-lg absolute top-3/4 -left-4 transform -translate-x-1/2 -translate-1/2"></div>
       <div className="z-10">
         <h5 className="text-xl font-bold text-white my-2">
           Let&apos;s Connect
@@ -54,10 +67,10 @@ const EmailSection = () => {
           try my best to get back to you!
         </p>
         <div className="socials flex flex-row gap-2">
-          <Link href="https://github.com" aria-label="Github">
+          <Link href="https://github.com/HimashaChinthani" aria-label="Github">
             <Image src="/github-icon.svg" alt="Github Icon" width={28} height={28} />
           </Link>
-          <Link href="https://linkedin.com" aria-label="LinkedIn">
+          <Link href="https://www.linkedin.com/in/himasha-chinthani-882076293/" aria-label="LinkedIn">
             <Image src="/linkedin-icon.svg" alt="Linkedin Icon" width={28} height={28} />
           </Link>
         </div>
