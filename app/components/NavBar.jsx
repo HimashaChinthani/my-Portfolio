@@ -1,7 +1,8 @@
  "use client";
  import React, { useState } from 'react'
 import MenuOverlay from "./MenuOverlay"
- import Link from "next/link";
+import Link from "next/link";
+import Image from 'next/image'
 import NavLink from "./NavLink";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 
@@ -26,7 +27,20 @@ const navLinks=[
    return (
      <nav className='fixed top-0 left-0 right-0 z-10 bg-[#121212] bg-opacity-100'>
         <div className='flex flex-wrap items-center justify-between mx-auto px-4 py-2'>
-            <Link href={"/"} className=" text-2xl md:text-5xl text-white font-semibold">LOGO</Link>
+            <div className="inline-flex items-center gap-3">
+              <Link href={"/"} aria-label="Home - Himasha" className="text-xl md:text-2xl text-white font-semibold">
+                Himasha
+              </Link>
+              <a
+                href="https://github.com/HimashaChinthani"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Himasha on GitHub"
+                className="p-1 rounded hover:bg-slate-800"
+              >
+                <Image src="/github-icon.svg" alt="GitHub" width={28} height={28} />
+              </a>
+            </div>
             <div className='mobile-menu block md:hidden'>
                {navbarOpen ? (
   <button
