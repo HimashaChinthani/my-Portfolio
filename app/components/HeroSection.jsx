@@ -65,7 +65,7 @@ const HeroSection = () => {
         </div>
 
         {/* Right Image Section */}
-        <div className='col-span-5 flex justify-center sm:justify-end items-center'>
+        <div className='col-span-5 flex justify-center sm:justify-start items-center sm:pl-10'>
           <div className='relative rounded-full bg-[#181818] w-[300px] h-[300px] flex items-center justify-center overflow-hidden shadow-lg'>
             <Image
               src="/images/hima2.png"

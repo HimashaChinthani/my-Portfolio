@@ -26,6 +26,7 @@ const projectsData = [
     gitUrl: "https://github.com/HimashaChinthani/Parlimate-Project.git",
     previewUrl: "/",
   },
+  
   {
     id: 3,
     title: " StayEase– Hotel Booking Platform",
@@ -42,6 +43,16 @@ const projectsData = [
     image: "/images/projects/4.png",
     tag: ["All", "Mobile"],
     gitUrl: "https://github.com/HimashaChinthani/Flutter_chat_app.git",
+    previewUrl: "/",
+  },
+  {
+    id: 5,
+    title: " Portfolio Web – Personal Showcase Site",
+    description:
+      "A responsive personal portfolio website highlighting projects, skills, and experience with smooth animations and a dark, modern UI. Built using Next.js, React, Tailwind CSS, and Framer Motion to ensure fast performance and a polished user experience.",
+    image: "/images/projects/3.png",
+    tag: ["All", "Web"],
+    gitUrl: "https://github.com/HimashaChinthani/Portfolio-Website-Sample",
     previewUrl: "/",
   },
  
