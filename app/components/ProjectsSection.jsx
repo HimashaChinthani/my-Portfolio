@@ -45,16 +45,19 @@ const projectsData = [
     gitUrl: "https://github.com/HimashaChinthani/Flutter_chat_app.git",
     previewUrl: "/",
   },
-  {
-    id: 5,
-    title: " Portfolio Web – Personal Showcase Site",
-    description:
-      "A responsive personal portfolio website highlighting projects, skills, and experience with smooth animations and a dark, modern UI. Built using Next.js, React, Tailwind CSS, and Framer Motion to ensure fast performance and a polished user experience.",
-    image: "/images/projects/3.png",
-    tag: ["All", "Web"],
-    gitUrl: "https://github.com/HimashaChinthani/Portfolio-Website-Sample",
-    previewUrl: "/",
-  },
+{
+  id: 5,
+  title: "Food Ordering Platform –",
+  description:
+    "Designed and developed a responsive food ordering app with microservices (authentication, user management, menu/catalog, order processing), JWT-based role access, real-time order tracking, checkout with cart persistence and payments, admin dashboards, multiple databases (PostgreSQL, MySQL, MongoDB), RESTful APIs, and reusable UI components for scalable and maintainable architecture.",
+  image: "/images/projects/5.png",
+  tag: ["All", "Web"],
+ gitUrl: [
+        "https://github.com/HimashaChinthani/Food_Ordering_Frontend.git",
+        "https://github.com/HimashaChinthani/Food_Ordering_backend.git"
+    ],
+  previewUrl: "/",
+},
  
 ];
 
