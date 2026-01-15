@@ -1,116 +1,64 @@
 "use client";
-import React, { useTransition, useState } from "react";
+import React from "react";
 import Image from "next/image";
-import TabButton from "./TabButton";
-
-const TAB_DATA = [
-  {
-    title: "Skills",
-    id: "skills",
-    content: (
-      <ul className="list-disc pl-2">
-        <li>React.js</li>
-        <li>Node.js & Express.js</li>
-        <li>Java (Servlets, JSP)</li>
-        <li>Flutter</li>
-        <li>MySQL / PostgreSQL / MongoDB</li>
-        <li>RESTful APIs</li>
-        <li>Git & GitHub Workflow</li>
-        <li>Tailwind CSS</li>
-      </ul>
-    ),
-  },
-  {
-    title: "Education",
-    id: "education",
-    content: (
-      <ul className="list-disc pl-2">
-        <li>
-          <strong>University of Colombo School of Computing</strong><br />
-          B.Sc. in Computer Science (2023 – Present) <br />
-          Current GPA: 3.109
-        </li>
-        <li>
-          <strong>St. Mary’s Convent, Matara</strong><br />
-          G.C.E A/L (2021): <br />
-          Physics - B, Chemistry - A, Combined Mathematics - A
-        </li>
-      </ul>
-    ),
-  },
-  {
-    title: "Certifications",
-    id: "certifications",
-    content: (
-      <ul className="list-disc pl-2">
-        <li>Programming Foundations: Object-Oriented Design</li>
-        <li>AWS Educate: Introduction to Cloud 101</li>
-        <li>React Essential Training</li>
-        <li>Python Quick Start</li>
-        <li>Git Essential Training (2023)</li>
-      </ul>
-    ),
-  },
-];
-
 
 const AboutSection = () => {
-  const [tab, setTab] = useState("skills");
-  const [isPending, startTransition] = useTransition();
-
-  const handleTabChange = (id) => {
-    startTransition(() => {
-      setTab(id);
-    });
+  const scrollToProjects = () => {
+    const el = document.getElementById("projects");
+    if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
   };
 
   return (
-    <section className="text-white" id="about">
-      <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
-       <Image 
-  src="/images/about-image.png" 
-  width={500} 
-  height={500} 
-  alt="Profile illustration" 
-  className="rounded-lg shadow-lg"
-/>
-
-        <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
-          <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
-          <p className="text-base lg:text-lg">
-            I am dedicated to advancing as a software engineer and am a third-year Computer Science undergraduate at the
- University of Colombo School of Computing with hands-on experience in full-stack development. I have worked
- extensively with Java, React, Node.js, Flutter, and databases including MySQL, PostgreSQL, and MongoDB. I
- am passionate about building complete, user-centric software applications that solve real-world problems. I am a
- proactive and fast learner who enjoys experimenting with new technologies and working both independently and
- collaboratively. I aim to contribute to multi faceted projects while gaining exposure to industry best practices
- and learning from experienced professionals.
-          </p>
-          <div className="flex flex-row justify-start mt-8">
-            <TabButton
-              selectTab={() => handleTabChange("skills")}
-              active={tab === "skills"}
-            >
-              {" "}
-              Skills{" "}
-            </TabButton>
-            <TabButton
-              selectTab={() => handleTabChange("education")}
-              active={tab === "education"}
-            >
-              {" "}
-              Education{" "}
-            </TabButton>
-            <TabButton
-              selectTab={() => handleTabChange("certifications")}
-              active={tab === "certifications"}
-            >
-              {" "}
-              Certifications{" "}
-            </TabButton>
+    <section id="about" className="py-12">
+      <div className="container">
+        <div className="about-card">
+          <div className="about-image">
+            <Image
+              src="/images/about-image.png"
+              alt="Profile"
+              width={700}
+              height={700}
+              className="w-full h-full object-cover"
+            />
           </div>
-          <div className="mt-8">
-            {TAB_DATA.find((t) => t.id === tab).content}
+
+          <div className="about-intro">
+            <h2 className="h2">About Me</h2>
+            <p>
+              I am a software engineer and a Computer Science undergraduate at the University of Colombo
+              School of Computing. I build full‑stack applications using Java, React, Node.js, and modern tooling.
+              I enjoy designing thoughtful user interfaces, building reliable backends, and learning new technologies
+              to solve real problems.
+            </p>
+
+            <div className="about-badges">
+              <span className="about-badge">Full‑Stack Developer</span>
+              <span className="about-badge">Open to Collaboration</span>
+              <span className="about-badge">Remote / Hybrid</span>
+            </div>
+
+            <div className="about-cta">
+              <button onClick={scrollToProjects} className="btn">See Projects</button>
+            </div>
+
+            <div className="education-list">
+              <div className="education-item">
+                <div className="education-year">2023 — Present</div>
+                <div className="education-body">
+                  <strong>University of Colombo School of Computing</strong>
+                  <div>B.Sc. in Computer Science</div>
+                  <div>Current GPA: 3.11</div>
+                </div>
+              </div>
+
+              <div className="education-item">
+                <div className="education-year">2021</div>
+                <div className="education-body">
+                  <strong>St. Mary’s Convent, Matara</strong>
+                  <div>G.C.E A/L — Physics: B, Chemistry: A, Combined Mathematics: A</div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

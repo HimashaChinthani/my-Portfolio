@@ -6,7 +6,7 @@
   --bg: #0f1724; /* used as fallback dark background */
   --surface: #0b1220;
   --card: #0f1724;
-  --muted: #94a3b8;
+  --muted: #94a3b1;
   --fg: #e6eef8;
   --accent: #7c3aed; /* violet */
   --accent-2: #06b6d4; /* teal */
@@ -186,9 +186,9 @@ input, textarea { padding: .5rem .75rem; border-radius: 8px; border: 1px solid r
   background: linear-gradient(135deg, rgba(124,58,237,0.14), rgba(6,182,212,0.08));
   flex-shrink: 0;
 }
-.tech-initial { font-weight: 800; color: var(--foreground); font-size: 1.05rem; }
+.tech-initial { font-weight: 800; color: var( --background); font-size: 1.05rem; }
 
-.tech-name { font-weight: 700; color: var(--foreground); }
+.tech-name { font-weight: 700; color: var( --background); }
 .tech-desc { font-size: 0.9rem; }
 
 @media (max-width: 640px) {
@@ -222,3 +222,55 @@ input, textarea { padding: .5rem .75rem; border-radius: 8px; border: 1px solid r
   .achievement-item:not(:last-child) { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.03); padding-bottom: .75rem; }
   .achievement-value { font-size: 1.9rem; }
 }
+
+/* About / Education styles */
+.about-card {
+  display: grid;
+  grid-template-columns: 420px 1fr;
+  gap: 2rem;
+  align-items: start;
+  background: linear-gradient(180deg, rgba(255,255,255,0.01), transparent);
+  padding: 1.75rem;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.04);
+}
+
+.about-image {
+  width: 100%;
+  max-width: 420px;
+  overflow: hidden;
+  border-radius: 12px;
+  height: 100%;
+  box-shadow: 0 12px 30px rgba(2,6,23,0.6);
+}
+.about-image img, .about-image .next-image {
+  width: 100% !important;
+  height: auto !important;
+  display: block;
+  object-fit: cover !important;
+}
+
+.about-intro h2 { color: var( --background); }
+.about-intro p { color: var( --background) !important; line-height: 1.6; }
+.about-badges .about-badge { color: var( --background); background: rgba(255,255,255,0.02); }
+
+.education-list { margin-top: 1.25rem; display:flex; flex-direction:column; gap: 0.5rem; }
+.education-item { display:flex; gap: 0.75rem; align-items:flex-start; }
+.education-year { min-width:72px; color: var( --background); font-weight:700; }
+.education-body { background: rgba(255,255,255,0.02); padding: .6rem .9rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.03); color: var(--muted-color) !important; }
+
+@media (max-width: 900px) {
+  .about-card { grid-template-columns: 1fr; }
+  .about-image { order: -1; max-width: 100%; }
+}
+
+/* Reduce vertical gap between Technologies and Projects */
+.tech-grid { margin-bottom: 0.5rem; }
+
+/* Technology text colors: keep names more prominent and descriptions muted */
+.tech-name { color: var( --background) !important; }
+.tech-desc { color: var(--background) !important; }
+
+/* Tighter spacing for tech cards */
+.tech-card { gap: 0.6rem; padding: 0.6rem; }
+
