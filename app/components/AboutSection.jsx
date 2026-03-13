@@ -47,7 +47,7 @@ const AboutSection = () => {
                 <div className="education-body">
                   <strong>University of Colombo School of Computing</strong>
                   <div>B.Sc. in Computer Science</div>
-                  <div>Current GPA: 3.11</div>
+                  <div>Current GPA: 3.26</div>
                 </div>
               </div>
 
