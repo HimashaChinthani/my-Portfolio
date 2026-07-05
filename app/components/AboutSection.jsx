@@ -43,7 +43,7 @@ const AboutSection = () => {
 
             <div className="education-list">
               <div className="education-item">
-                <div className="education-year">2023 — Present</div>
+                <div className="education-year">2023 — 2026</div>
                 <div className="education-body">
                   <strong>University of Colombo School of Computing</strong>
                   <div>B.Sc. in Computer Science</div>

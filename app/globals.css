@@ -264,6 +264,110 @@ input, textarea { padding: .5rem .75rem; border-radius: 8px; border: 1px solid r
   .about-image { order: -1; max-width: 100%; }
 }
 
+/* Work Experience section */
+.experience-section {
+  padding: 1rem 0 1rem;
+  margin: 0.25rem 0 0;
+  border-radius: 18px;
+  background: linear-gradient(180deg, rgba(15, 23, 42, 0.92), rgba(2, 6, 23, 0.96));
+  border: 1px solid rgba(56, 189, 248, 0.16);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.32);
+}
+
+.experience-intro {
+  max-width: 760px;
+  color: #cbd5e1;
+  opacity: 1;
+  margin-bottom: 1.5rem;
+}
+
+.experience-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.experience-card {
+  padding: 1.5rem;
+  border-radius: 14px;
+  border: 1px solid rgba(125, 211, 252, 0.18);
+  background: linear-gradient(180deg, rgba(15, 23, 42, 0.96), rgba(30, 41, 59, 0.94));
+  box-shadow: 0 14px 32px rgba(2, 6, 23, 0.6);
+}
+
+.experience-header {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 0.85rem;
+}
+
+.experience-role {
+  color: #f8fafc;
+  font-size: 1.1rem;
+  font-weight: 800;
+  margin-bottom: 0.15rem;
+}
+
+.experience-company,
+.experience-project,
+.experience-bullets li {
+  color: #cbd5e1;
+}
+
+.experience-company {
+  font-weight: 600;
+  color: #e2e8f0;
+}
+
+.experience-period {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+  background: rgba(14, 165, 233, 0.18);
+  color: #e0f2fe;
+  font-size: 0.875rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.experience-project {
+  font-weight: 700;
+  margin-bottom: 0.9rem;
+  color: #f8fafc;
+}
+
+.experience-bullets {
+  margin: 0;
+  padding-left: 1.1rem;
+  display: grid;
+  gap: 0.55rem;
+}
+
+.experience-bullets li::marker {
+  color: #38bdf8;
+}
+
+.experience-tags {
+  margin-top: 1rem;
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.experience-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.35rem 0.65rem;
+  border-radius: 999px;
+  background: rgba(14, 165, 233, 0.12);
+  color: #e0f2fe;
+  font-size: 0.85rem;
+  border: 1px solid rgba(56, 189, 248, 0.2);
+}
+
 /* Reduce vertical gap between Technologies and Projects */
 .tech-grid { margin-bottom: 0.5rem; }
 
