@@ -25,8 +25,8 @@ const AboutSection = () => {
           <div className="about-intro">
             <h2 className="h2">About Me</h2>
             <p>
-              I am a software engineer and a Computer Science undergraduate at the University of Colombo
-              School of Computing. I build full‑stack applications using Java, React, Node.js, and modern tooling.
+              I am a software engineer and a Recent Computer Science graduate at the University of Colombo
+              School of Computing. I build full‑stack applications using Go,Java, React, Node.js, and modern tooling.
               I enjoy designing thoughtful user interfaces, building reliable backends, and learning new technologies
               to solve real problems.
             </p>
@@ -46,8 +46,8 @@ const AboutSection = () => {
                 <div className="education-year">2023 — 2026</div>
                 <div className="education-body">
                   <strong>University of Colombo School of Computing</strong>
-                  <div>B.Sc. in Computer Science</div>
-                  <div>Current GPA: 3.26</div>
+                  <div>B.Sc. in Computer Science(Second Class Upper division)</div>
+                  <div>Current GPA: 3.301</div>
                 </div>
               </div>
 

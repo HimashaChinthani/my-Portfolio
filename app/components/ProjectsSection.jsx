@@ -58,7 +58,19 @@ const projectsData = [
     ],
   previewUrl: "/",
 },
- 
+ {
+  id: 6,
+  title: "Plant Store – E-Commerce & Nursery Management Platform –",
+  description:
+    "A full-stack web application designed for plant nurseries to manage catalog listings and showcase inventory. Features a secure administrative portal powered by JWT authentication, dynamic plant management (categories, care instructions, pricing, and images), and a RESTful backend API built with Node.js, Express, and MySQL.",
+  image: "/images/projects/6.png",
+  tag: ["All", "Web"],
+ gitUrl: [
+        "https://github.com/HimashaChinthani/plant_store.git"
+        
+    ],
+  previewUrl: "/",
+},
 ];
 
 const ProjectsSection = () => {
